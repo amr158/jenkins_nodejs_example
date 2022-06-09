@@ -1,5 +1,5 @@
 pipeline {
-    agentName = "application"
+    agent { label 'application' }
     stages {
         stage('Building our image') {
             steps{

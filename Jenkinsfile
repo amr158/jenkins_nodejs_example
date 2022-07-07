@@ -10,9 +10,9 @@ pipeline {
             steps{
                 withCredentials([usernamePassword(credentialsId: 'docker-nexus' , usernameVariable: 'username', passwordVariable: 'password')]) {
                     sh """
-                    docker login 10.101.125.248:8082 -u ${username} -p ${password}
-                    docker tag nodejs-app 10.101.125.248:8082/nodejs-app
-                    docker push 10.101.125.248:8082/nodejs-app
+                    docker login 10.101.167.178:8082 -u ${username} -p ${password}
+                    docker tag nodejs-app 10.101.167.178:8082/nodejs-app
+                    docker push 10.101.167.178:8082/nodejs-app
                     """
                 }
             }
